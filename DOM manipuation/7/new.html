@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifying the document</title>
+    <style>
+         .alert{
+            color: green;
+            background-color: aquamarine;
+            border-radius: 4px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert">
+        <strong>Hello There!</strong>
+    </div>
+    <script>
+        let div = document.querySelector('div');
+        let div2 = div.cloneNode(true);
+        div2.querySelector('strong').innerHTML = "<strong>Bye There</strong>";
+        div.after(div2);
+    </script>
+</body>
+</html>

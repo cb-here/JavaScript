@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object</title>
+</head>
+<body>
+    <button>Click Me!</button>
+    <script>
+        let btn = document.querySelector('button');
+        let obj = {
+            name : "Hello",
+            handleEvent(event) {
+                alert(event.type + " at " + event.currentTarget);
+            }
+        };
+        btn.addEventListener('click', obj);
+    </script>
+    <button id="elem">Hello</button>
+    <script>
+        class Menu {
+            handleEvent(event) {
+                switch(event.type) {
+                    case 'mousedown':
+                        elem.innerHTML = "Mouse button pressed";
+                        break;
+                    case 'mouseup':
+                        elem.innerHTML += ".... and realeased";
+                        break;
+                }
+            }
+        }
+        let menu = new Menu();
+        elem.addEventListener('mousedown', menu);
+        elem.addEventListener('mouseup', menu);
+    </script>
+</body>
+</html>

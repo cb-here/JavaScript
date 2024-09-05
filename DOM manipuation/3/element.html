@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walking DOM</title>
+</head>
+<body>
+    <div>Begin</div>
+    <ul>
+        <li>
+            <b>Infromation</b>
+        </li>
+    </ul>
+    <div>End</div>
+    <script>
+        // alert(document.documentElement.parentElement); // null
+        // alert(document.documentElement.parentNode); // document
+        for(let element of document.body.children){
+            alert(element);
+        }
+    </script>
+</body>
+</html>

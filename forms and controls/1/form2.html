@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form.name</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" name="login">
+    </form>
+    <script>
+       console.log(form.login);
+       form.login.name = "username";
+       console.log(form.elements.login); // undefined
+       console.log(form.elements.username);
+       console.log(form.login == form.username);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding a closing button</title>
+</head>
+<body>
+    <div id="elem">
+        <h3>Horse</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum fugit dicta saepe doloremque ipsum, asperiores eveniet ex voluptatem neque sunt inventore voluptas porro quas, eligendi architecto incidunt aperiam aspernatur beatae?</p>
+    </div>
+    <div id="elem">
+        <h3>Source</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum fugit dicta saepe doloremque ipsum, asperiores eveniet ex voluptatem neque sunt inventore voluptas porro quas, eligendi architecto incidunt aperiam aernatur beatae?</p>
+    </div>
+    <div id="elem">
+        <h3>House</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum fugit dicta saepe doloremque ipsum, asperiores eveniet ex voluptatem neque sunt inventore voluptas porro quas, eligendi architecto incidunt aperiam aspernatur beatae?</p>
+    </div>
+    <script>
+       let pane =  document.querySelectorAll('div');
+       for (let p of pane){
+        p.insertAdjacentHTML('afterbegin', '<button class="remove-btn">[x]</button>');
+        p.firstChild.onclick = () => p.remove();
+    }
+    </script>
+</body>
+</html>

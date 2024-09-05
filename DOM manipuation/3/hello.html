@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walking DOM</title>
+</head>
+<body>
+    <ul>
+        <li>Hello world</li>
+    </ul>
+    <script>
+        alert(document.body.parentNode == document.documentElement); // true
+        alert(document.head.nextSibling);
+        alert(document.body.previousSibling);
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding a new option</title>
+</head>
+<body>
+    <select id="genres">
+        <option value="rock">Rock</option>
+        <option value="blues" selected>Blues</option>
+    </select>
+    <script>
+        console.log(genres.value);
+        let option = new Option("Classic", "classic");
+        genres.append(option);
+        option.selected = true;
+    </script>
+</body>
+</html>

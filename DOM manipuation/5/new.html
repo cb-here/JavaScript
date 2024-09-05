@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+<body>
+    <ul>
+        <li>Hello</li>
+        <li>World</li>
+        <li>Nerds</li>
+        <li>Surbs</li>
+    </ul>
+    <ul>
+        <li>Hello</li>
+        <li>World</li>
+        <li>Nerds</li>
+        <li>Surbs</li>
+    </ul>
+    <script>
+        let lists = document.querySelectorAll('li');
+        let count = 0;
+        for(let content of lists){
+            console.log(content.innerHTML);
+            count++;
+        }
+        alert(count);
+    </script>
+</body>
+</html>

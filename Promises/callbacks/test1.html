@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PosNumbers</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="calculator"></div>
+    <script>
+        let numbers = [1, 2, 3, -1, -5, 6];
+        let posNumbers = removeNeg(numbers, x => x >= 0);
+        document.getElementById('demo').innerHTML = posNumbers;
+        function removeNeg(numbers, callback) {
+            let arr = [];
+            for (let x of numbers){
+                if(callback(x)) {
+                    arr.push(x);
+                }
+            }
+            return arr;
+        }
+    </script>
+    <script>
+        function display(something) {
+            document.getElementById('calculator').innerHTML = something;
+        }
+        function calculator(num1, num2, callback) {
+            let sum = num1 + num2;
+            callback(sum);
+        }
+        calculator(7, 6, display);
+    </script>
+</body>
+</html>

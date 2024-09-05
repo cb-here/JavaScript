@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data-* attributes</title>
+</head>
+<body>
+    data-* attributes is used to perform the specific task on a specific element
+    <br>
+    <div>
+        <button data-name="saving">Save</button>
+        <button data-name="deleting">Delete</button>
+        <button data-name="loading">Load</button>
+    </div>
+    <!-- <script>
+        let button = document.querySelectorAll('button');
+        for(let b of button) {
+            b.onclick = function(event) {
+                alert(event.target.innerHTML);
+            }
+        }
+    </script> -->
+    <script>
+        document.addEventListener('click', function(event) {
+            if (event.target.tagName == 'BUTTON') {
+                let message = event.target.dataset.name;
+                alert(message);
+            }
+        })
+    </script>
+</body>
+</html>

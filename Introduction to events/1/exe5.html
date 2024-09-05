@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Menu</title>
+    <style>
+        #menu{
+            background-color: aquamarine;
+            padding: 14px;
+        }
+        #menu ul {
+            padding-left: 20px;
+            list-style: none;
+            display: none;
+        }
+        #menu::before {
+            content: '>';
+            color: green;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        #menu.open::before{
+            content: "^";
+        }
+        #menu.open ul {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        Click Me
+        <ul>
+            <li>Cake</li>
+            <li>Cake</li>
+            <li>Cake</li>
+        </ul>
+    </div>
+    <script>
+        menu.onclick = function() {
+            menu.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

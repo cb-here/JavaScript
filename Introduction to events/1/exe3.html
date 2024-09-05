@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Which Handlers run</title>
+</head>
+<body>
+    <button>Click Me!</button>
+    <script>
+        let button = document.querySelector('button');
+        button.addEventListener('click', () => alert(1)); // 1
+        button.removeEventListener('click', () => alert(1)); // doesn't do anything
+        button.onclick = function() {
+            alert(2); // 2
+        }
+    </script>
+</body>
+</html>

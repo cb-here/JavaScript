@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+</head>
+<body>
+    <h1 id="elem">Hello from scripts</h1>
+    <script>
+        document.addEventListener("hello", function(event) {
+            alert("Hello from " + event.target.tagName);
+        });
+        let event = new Event("hello", {bubbles : true});
+        elem.dispatchEvent(event);
+    </script>
+</body>
+</html>

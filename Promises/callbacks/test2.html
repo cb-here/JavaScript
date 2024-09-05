@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        #demo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: rgb(24, 227, 13);
+            padding: 15px 40px;
+            border: 1px solid black;
+            border-radius: 15px;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="demo" draggable="true"></div>
+    <script>
+        setInterval(function(){
+            let d = new Date();
+            demo.innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+        }, 1000);
+    </script>
+</body>
+</html>

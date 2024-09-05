@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes and properties</title>
+</head>
+<body id = "test" type="....." something = "non-standard">
+    <input type="text">
+    <script>
+        console.log(document.body.id);
+        console.log(document.body.something);
+        console.log(document.body.type);
+        console.log(document.querySelector('input').type);
+
+        // elem.getAttribute(name)
+        // elem.setAttribute(name, value)
+        // elem.hasAttribute(name)
+        // elem.removeAttribute(name)
+        // elem.attributes --> iterable
+
+        console.log(document.body.getAttribute('something'));
+        let elem = document.querySelector('input');
+        elem.setAttribute('id', "input-name");
+        console.log(elem.outerHTML);
+        for(let i of elem.attributes){
+            console.log(i);
+        }
+        elem.removeAttribute('id');
+        console.log(elem.outerHTML);
+        console.log(elem.hasAttribute('type'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+    <style>
+        .highlight{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <table border="2" cellpadding="10px">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td><strong>9</strong></td>
+        </tr>
+    </table>
+    <script>
+        let table = document.querySelector('table');
+        let selectedTd;
+        table.onclick = function(event) {
+            let td = event.target.closest('td');
+            if(!td) return;
+            if(!table.contains(td)) return;
+            highlight(td);
+        }
+        function highlight(td) {
+            if (selectedTd) {
+                selectedTd.classList.remove('highlight');
+            }
+            selectedTd = td;
+            selectedTd.classList.add('highlight');
+        }
+    </script>
+</body>
+</html>

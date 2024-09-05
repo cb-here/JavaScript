@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenuBar</title>
+    <style>
+        .menu {
+            border: 1px solid blue;
+            padding: 10px;
+        }
+        .menu ul {
+            padding-left: 20px;
+            list-style-type: none;
+            display: none;
+        }
+        .menu::before {
+            content: '>';
+            color: green;
+            font-weight: bold;
+        }
+        .menu.open ul{
+            display: block;
+        }
+        .menu.open::before{
+            content: '^';
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        Click Me
+        <ul>
+            <li>Save</li>
+            <li>Load</li>
+            <li>Search</li>
+        </ul>
+    </div>
+    <script>
+        let menu = document.querySelector('.menu');
+        menu.onclick = function(event) {
+            menu.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

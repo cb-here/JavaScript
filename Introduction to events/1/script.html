@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+    <style>
+        .test {
+            color : rgb(23, 27, 116);
+            border: 5px solid chartreuse;
+            width: 200px;
+            height: 20px;
+        }
+        .highlight {
+            background-color: rgb(221, 6, 221);
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+    <script>
+        btn.onclick = function() {
+            this.className = "highlight";
+            let div = document.createElement('div');
+            div.innerHTML = "<b>Thank You<b>";
+            div.className = "test";
+            setTimeout(() => btn.after(div), 1000);
+            
+        }
+    </script>
+</body>
+</html>

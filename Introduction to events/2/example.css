@@ -1,0 +1,18 @@
+body{
+    background-color: aquamarine;;
+}
+form {
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+}
+div{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(37, 233, 11);
+}
+p {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 0, 255);
+}

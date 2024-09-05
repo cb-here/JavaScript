@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul">
+        <li id = "one">1</li>
+        <li id = "four">4</li>
+    </ul>
+    <script>
+        // let two = document.createElement('li');
+        // two.innerHTML = 2;
+        // one.after(two);
+        // let three = document.createElement('li');
+        // three.innerHTML = 3;
+        // four.before(three);
+        one.insertAdjacentHTML('afterend', "<li>2</li><li>3</li>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Property</title>
+</head>
+<body>
+    <input type="button" id="elem" value="Click Me">
+    <script>
+        elem.onclick = function() {
+            alert('Thank You');
+        }
+    </script>
+    <input type="button" id="btn" value="Click Me" onclick="alert('Hello')">
+    <script>
+        btn.onclick = function() {
+            alert('Bye');
+        }
+    </script>
+    <button onclick="alert('Before')">Click Me</button>
+    <script>
+        let button = document.querySelector('button');
+        button.onclick = function() {
+            alert('After');
+        }
+        button.onclick = null;
+    </script>
+</body>
+</html>

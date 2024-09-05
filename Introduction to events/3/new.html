@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+    <style>
+        .button {
+            position: absolute;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Hello</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti consequatur eveniet voluptatum architecto praesentium quisquam voluptatibus ab quo quod delectus, nesciunt similique eius recusandae. Hic reiciendis voluptas nihil debitis perspiciatis maiores temporibus animi dolor provident, dolorem itaque. Explicabo esse qui nisi vitae laudantium blanditiis minus repellendus dicta, nihil sint tempore.</p>
+    </div>
+    <div>
+        <h3>House</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti consequatur eveniet voluptatum architecto praesentium quisquam voluptatibus ab quo quod delectus, nesciunt similique eius recusandae. Hic reiciendis voluptas nihil debitis perspiciatis maiores temporibus animi dolor provident, dolorem itaque. Explicabo esse qui nisi vitae laudantium blanditiis minus repellendus dicta, nihil sint tempore.</p>
+    </div>
+    <div>
+        <h3>Horse</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti consequatur eveniet voluptatum architecto praesentium quisquam voluptatibus ab quo quod delectus, nesciunt similique eius recusandae. Hic reiciendis voluptas nihil debitis perspiciatis maiores temporibus animi dolor provident, dolorem itaque. Explicabo esse qui nisi vitae laudantium blanditiis minus repellendus dicta, nihil sint tempore.</p>
+    </div>
+    <script>
+        let div = document.querySelectorAll('div');
+        for(let elem of div){
+        elem.insertAdjacentHTML('afterbegin', `<button class='button'>[x]</button>`);
+        elem.firstChild.onclick = () => elem.remove();
+        }
+    </script>
+</body>
+</html>

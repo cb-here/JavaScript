@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation: form and elements</title>
+</head>
+<body>
+    <form name="my">
+        <input type="text" value="1" name="one">
+        <input type="text" value="2" name="two">
+    </form>
+    <script>
+        let form = document.forms.my;
+        let elem = form.elements.one;
+        // alert(elem.value);
+    </script>
+    <form>
+        <input type="radio" value="male" name="age">Male
+        <input type="radio" value="female" name="age">Female
+    </form>
+    <script>
+        let form1 = document.forms[1];
+        let elements = form1.elements.age;
+        // alert(elements[0]);
+    </script>
+</body>
+</html>

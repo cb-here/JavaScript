@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+</head>
+<body>
+    <button id="btn">Click Me!</button>
+    <button id="btn2">Thanks</button>
+    <script>
+        btn.addEventListener('click', ()=>alert("Bye"));
+        btn.removeEventListener('click', ()=> alert("Bye"));
+        function handler() {
+            alert('Thanks');
+        }
+        btn2.addEventListener('click', handler);
+        btn2.removeEventListener('click', handler);
+    </script>
+</body>
+</html>

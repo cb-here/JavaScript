@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object</title>
+</head>
+<body>
+    <button>Click Me!</button>
+    <script>addEventListener
+        let btn = document.querySelector('button');
+        btn.onclick = function(event) {
+            alert(event.type + " at " + event.currentTarget);
+            alert("Coordinates: " + event.clientX + ':' + event.clientY);
+        }
+    </script>
+    <button onclick="alert(event.type)">Click Me!</button>
+    <input type="button" value="submit" id="elem">
+    <script src="event3.js"></script>
+</body>
+</html>

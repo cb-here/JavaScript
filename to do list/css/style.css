@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    background-color: burlywood;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box {
+    padding: 20px;
+    width: 500px;
+    height: 600px;
+    background-color: rgb(148, 39, 148);
+    border-radius: 20px;
+    border: 1px solid pink;
+    box-shadow: 9px 9px 9px rgb(52, 23, 23);
+    display: flex;
+    flex-direction: column;
+}
+#task-name {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.2em;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    background-color: #333;
+    /* padding: 5px; */
+    color: #fff;
+    border-radius: 4px;;
+}
+
+.left {
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left::after{
+    content: 'che';
+}
+.left::before {
+    content: 'cross';
+}

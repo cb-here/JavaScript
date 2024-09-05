@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow up events</title>
+</head>
+<body>
+    <input type="text" value="Click Me" onfocus="this.value=''">
+    <input type="text" value="Don't click me" onmousedown="return false">
+    <input type="button" value="1" data-id="btn">
+    <button>1</button>
+    <script>
+        document.addEventListener('click', function(event) {
+            if(event.target.dataset.id == 'btn') {
+                event.target.value++;
+                alert(event.target.tagName);
+            }
+            
+        });
+        document.addEventListener('click', function(event) {
+            if (event.target.tagName == 'BUTTON') {
+                let value = event.target.innerHTML;
+            }
+        })
+    </script>
+</body>
+</html>

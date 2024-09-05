@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabindex</title>
+    <style>
+        ul li {
+            cursor: pointer;
+        }
+        :focus {
+            border: 1px dashed green;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li tabindex="1">One</li>
+        <li tabindex="0">Zero</li>
+        <li tabindex="2">Two</li>
+        <li tabindex="-1">Minus One</li>
+    </ul>
+</body>
+</html>

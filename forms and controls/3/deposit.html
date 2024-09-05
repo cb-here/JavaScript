@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Calculator</title>
+</head>
+<body>
+    Deposit Calculator.
+    <form>
+    <table border="2" cellpadding="18px">
+        <tr>
+            <td>Intial Deposit</td>
+            <td><input type="text" id="first"  value="10000"></td>
+        </tr>
+        <tr>
+            <td>How many months</td>
+            <td><select id="years">
+                <option value="0.25">3(minimun)</option>
+                <option value="0.5">6(half-year)</option>
+                <option value="1" selected>12(one year)</option>
+                <option value="1.5">18(1.5 years)</option>
+                <option value="2">24(2 years)</option>
+                <option value="2.5">30(2.5 years)</option>
+                <option value="3">36(3 years)</option>
+                <option value="5">60(5 years)</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>IInterest Per year?</td>
+            <td><input type="text" id="interests" value="5"></td>
+        </tr>
+        <tr>
+            <td>
+                <span id="was"></span>
+                <div style="margin-left: 50px; width: 30px; height: 40px; background-color: red;"></div>
+            </td>
+            <td>
+                <span id="become"></span>
+                <div style="margin-left: 50px; width: 30px; height: 40px; background-color: rgb(10, 242, 84);"></div>
+            </td>
+        </tr>
+    </table>
+    </form>
+    <script>
+        let initial;
+        first.oninput = function(event) {
+            initial = +this.value;
+            was.innerHTML = this.value;
+        }
+        let year;
+        years.onchange = function() {
+            year = +this.value;
+        }
+        let interest;
+        interests.oninput = function() {
+            interest = +this.value;
+        }
+        let result = Math.round(initial * (1 + interest) ** year);
+        become.innerHTML = result;
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preventing Default Action</title>
+    <style>
+        ul {
+            display: flex;
+            list-style: none;
+            height: 40px;
+            width: 300px;
+            background-color: chartreuse;
+            align-items: center;
+            justify-content: space-around;
+            border-radius: 4px;
+            filter: drop-shadow(10px 10px 20px red);
+            /* box-shadow: 10px 10px 20px red; */
+        }
+        ul li a {
+            text-decoration: none;
+            font-size: 1.3em;
+            color: black;
+        }
+        img {
+            width: 400px;
+            height: 300px;
+            box-shadow: 10px 2px 9px indianred;
+            filter: drop-shadow(10px 10px 30px green);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="/html">HTML</a></li>
+        <li><a href="/css">CSS</a></li>
+        <li><a href="/javascript">JavaScript</a></li>
+    </ul>
+    <img src="me.jpg" alt="">
+    <script>
+        document.querySelector('ul').onclick = function(event){
+            if (event.target.tagName != 'A') return;
+            let href = event.target.getAttribute('href');
+            alert(href);
+            return false;
+        }
+    </script>
+</body>
+</html>

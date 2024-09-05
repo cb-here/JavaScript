@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+</head>
+<body>
+    <select id="select" multiple>
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="pear">Pear</option>
+    </select>
+    <script>
+        select.value="pear";
+        select.selectedIndex = 1;
+        select.options[2].selected=true;
+        let selected = Array.from(select.options)
+        .filter(option => option.selected)
+        .map(option => option.value);
+        alert(selected);
+        option = new Option("Text", 'value', true, true);
+        console.log(option);
+        select.append(option);
+    </script>
+</body>
+</html>

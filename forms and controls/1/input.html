@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Field</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" id="textfield" value="Hello" name="username">
+        <input type="radio" value="female" name="gender">
+        <input type="radio" value="female" name="gender">
+    </form>
+    <script>
+        let textfield = form.username;
+        console.log(textfield.value);
+        let gender = form.gender;
+        console.log(gender.selected);
+    </script>
+</body>
+</html>

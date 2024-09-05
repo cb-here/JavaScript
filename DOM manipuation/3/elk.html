@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walking DOM</title>
+</head>
+<body>
+    <div>Begin</div>
+    <ul>
+        <li>
+            <b>Infromation</b>
+        </li>
+    </ul>
+    <script>
+    //    let arr = Array.from(document.body.childNodes);
+    //    for (let i of arr){
+    //     alert(i);
+    //    }
+    //    for (let a = 0; a < document.body.childNodes.length; a++){
+    //     alert(document.body.childNodes[a]);
+    //    }
+    // for (let i of document.body.childNodes){
+    //     alert(i);
+    // }
+    // console.log(document.body.childNodes);
+
+    for (let prop in document.body.childNodes) alert(prop);
+    </script>
+    ... more stuff here ...
+</body>
+</html>

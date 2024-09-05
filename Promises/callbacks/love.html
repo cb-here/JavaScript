@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        setTimeout(function() {
+            myFunction("I love you");
+        }, 3000);
+        function myFunction(value) {
+            document.getElementById('demo').innerHTML = value;
+        }
+        // setInterval(myFunction('Hello'), 1000);
+    </script>
+</body>
+</html>

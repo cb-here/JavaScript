@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide On Click</title>
+</head>
+<body>
+    <ul data-ul>
+        <li>Animals</li>
+        <ul>
+            <li>Mammals</li>
+            <ul>
+                <li>Cows</li>
+                <li>Donkeys</li>
+                <li>Dogs</li>
+            </ul>
+            <li><b>Other</b></li>
+            <ul>
+                <li>Snakes</li>
+                <li>Birds</li>
+            </ul>
+        </ul>
+    </ul>
+    <script>
+        document.addEventListener('click', function(event){
+            if(event.target.tagName == 'UL' || event.target.tagName == 'LI'){
+                
+            }
+        })
+    </script>
+</body>
+</html>

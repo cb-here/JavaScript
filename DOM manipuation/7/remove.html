@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifying the document</title>
+    <style>
+         .alert{
+            color: green;
+            background-color: aquamarine;
+            border-radius: 4px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div id = "first">first</div>
+    <div id = "second">second</div>
+    <script>
+        let div = document.querySelector('div');
+        div.innerHTML = "<strong>Hello There</strong>";
+        div.className = "alert";
+        setTimeout(() => div.remove(), 4000);
+    </script>
+    <script>
+        first.before(second);
+    </script>
+</body>
+</html>

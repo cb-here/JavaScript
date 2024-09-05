@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation: dataset</title>
+</head>
+<body>
+    <div>
+        <button data-id="1">Button 1</button>
+        <button data-id="2">Button 2</button>
+        <button data-id="3">Button 3</button>
+    </div>
+    <script>
+        document.addEventListener('click', function(event) {
+            if(event.target.tagName == 'BUTTON') {
+                let id = event.target.dataset.id;
+                alert(`Button with dataset ${id} was clicked`);
+            }
+        });
+    </script>
+</body>
+</html>

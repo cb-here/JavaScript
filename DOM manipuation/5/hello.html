@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hello
+    <div id="news">
+        <h1>Headline</h1>
+        <p>................</p>
+    </div>
+    <!-- comment -->
+     <!-- <script>
+        alert(document.body.firstChild.data); // Hello
+        let comment = document.body.firstChild.nextSibling;
+        alert(comment.data);
+     </script> -->
+     <div id="elem"></div>
+     <div hidden>This will not be show</div>
+     <div class="hide">Hello World hidden</div>
+     <script>
+        // alert(news.textContent);
+        // let name = prompt("What is your name?", "<b>cbhere</b>");
+        // elem.innerHTML = name;
+        // elem.textContent += name;
+        let hide = document.querySelector('.hide')
+        setInterval(() => {
+            hide.hidden = !hide.hidden;
+        }, 1000);
+     </script>
+</body>
+</html>
